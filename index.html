@@ -45,19 +45,6 @@
                     <p class="text-[11px] text-slate-400">50% Off Eatigo Deals • Origin: CapitaSky (Tanjong Pagar)</p>
                 </div>
             </div>
-
-            <!-- Right Controls: Copy Slack Summary & Guide Modal Trigger -->
-            <div class="flex items-center space-x-2">
-                <button onclick="openSlackGuide()" class="flex items-center space-x-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-2 rounded-xl text-xs font-semibold border border-slate-700 transition">
-                    <i class="fa-solid fa-circle-question text-amber-400"></i>
-                    <span class="hidden md:inline">How to Post in Slack</span>
-                </button>
-                <button onclick="copySlackSummary()" class="flex items-center space-x-2 bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-600 hover:to-purple-800 text-white px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-lg shadow-purple-900/40 border border-purple-500/30 transition active:scale-95">
-                    <i class="fa-brands fa-slack text-sm"></i>
-                    <span class="hidden sm:inline">Copy for Slack</span>
-                    <span class="sm:hidden">Slack</span>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -72,13 +59,8 @@
                 </span>
                 <h2 class="text-xl sm:text-2xl font-extrabold text-white">Compare Venue Options & Menus</h2>
                 <p class="text-xs sm:text-sm text-slate-400 max-w-2xl">
-                    Review pricing, travel times from CapitaSky (79 Robinson Rd), expandable menu highlights, and vegetarian options. Copy the summary below to post directly into your Slack channel!
+                    Review pricing, travel times from CapitaSky (79 Robinson Rd), expandable menu highlights, and vegetarian options.
                 </p>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
-                <button onclick="copySlackSummary()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-5 py-3 rounded-xl text-sm shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2 transition">
-                    <i class="fa-brands fa-slack text-base"></i> Copy Slack Markdown Message
-                </button>
             </div>
         </section>
 
@@ -384,17 +366,8 @@
     <footer class="bg-slate-950 border-t border-slate-800 py-6 mt-12 text-center text-xs text-slate-400">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>Singapore Team Festive Buffet Guide • All prices subject to 10% service charge & prevailing GST.</p>
-            <button onclick="copySlackSummary()" class="text-amber-400 hover:underline font-semibold flex items-center gap-1">
-                <i class="fa-brands fa-slack"></i> Copy Slack Summary
-            </button>
         </div>
     </footer>
-
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-slate-800 border border-amber-500/50 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-3 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
-        <span id="toast-message" class="text-xs font-medium">Notification message</span>
-    </div>
 
     <!-- Script Logic -->
     <script>
@@ -409,87 +382,6 @@
                 icon.classList.remove('rotate-180');
             }
         };
-
-        window.copySlackSummary = function() {
-            const slackText = 
-`🍽️ *TEAM FESTIVE BUFFET LUNCH OPTIONS (50% EATIGO DEALS)* 🍽️
-📍 *Origin:* CapitaSky (79 Robinson Rd, Tanjong Pagar)
-🌱 *Vegetarian-friendly highlights included for all options!*
-
-1️⃣ *The Orchard Cafe @ Orchard Hotel Singapore*
-• Price: *SGD 47.00* (UP: SGD 94.00 | 50% Off) | Mon–Thu 12:00pm–2:30pm
-• Ratings: ★ 4.4 Google | ★ 4.3 Eatigo
-• Commute from CapitaSky: *6.1 km (~20m drive / ~25m MRT)*
-• Eatigo Booking: https://eatigo.com/en/branches/3373954165950
-• Menu PDF: https://www.millenniumhotels.com/mhb-media/regions/asia/singapore/orchardhotelsingapore/dining/documents/toc/toc-weekday_28oct.pdf?rev=f0282b78e77e4fe4b52f5a62bb2a3079
-
-2️⃣ *Edge @ Pan Pacific Singapore*
-• Price: *SGD 39.00* (UP: SGD 78.00 | 50% Off) | Mon–Thu 12:00pm–2:30pm
-• Ratings: ★ 4.2 Google | ★ 4.8 Eatigo
-• Commute from CapitaSky: *2.6 km (~9m drive / ~25m MRT)*
-• Eatigo Booking: https://eatigo.com/en/branches/3394733747670
-• Digital Menu: https://www.menu-ppsin.panpacific.com/festive-weekday-lunch-nov
-
-3️⃣ *Town Restaurant @ The Fullerton Hotel Singapore*
-• Price: *SGD 39.00* (UP: SGD 78.00 | 50% Off) | Mon–Fri 12:00pm–2:30pm
-• Ratings: ★ 4.1 Google | ★ 4.5 Eatigo
-• Commute from CapitaSky: *1.4 km (~6m drive / ~13m MRT)*
-• Eatigo Booking: https://eatigo.com/en/branches/3371379124888
-• Menu PDF: https://document-tc.galaxy.tf/wdpdf-7l5u7ljc5jjh9rurf4zceqaa8/festive-lunch-buffet.pdf
-
-👇 *Cast your vote in the reactions below!*
-1️⃣ The Orchard Cafe
-2️⃣ Edge @ Pan Pacific
-3️⃣ Town Restaurant @ Fullerton`;
-
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(slackText).then(
-                    function () { showToast("Slack summary copied to clipboard successfully!", "success"); },
-                    function () { fallbackCopy(slackText); }
-                );
-            } else {
-                fallbackCopy(slackText);
-            }
-        };
-
-        function fallbackCopy(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.select();
-            try {
-                document.execCommand('copy');
-                showToast("Slack summary copied to clipboard successfully!", "success");
-            } catch (err) {
-                showToast("Failed to copy automatically.", "error");
-            } finally {
-                document.body.removeChild(textarea);
-            }
-        }
-
-        window.openSlackGuide = function() {
-            showToast("Click 'Copy for Slack' and paste it right into your Slack channel!", "info");
-        };
-
-        function showToast(msg, type = "success") {
-            const toast = document.getElementById('toast');
-            const msgEl = document.getElementById('toast-message');
-            const iconEl = document.getElementById('toast-icon');
-
-            msgEl.innerText = msg;
-            if (type === "success") {
-                iconEl.className = "fa-solid fa-circle-check text-emerald-400 text-lg";
-            } else {
-                iconEl.className = "fa-solid fa-circle-info text-amber-400 text-lg";
-            }
-
-            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
-            }, 3500);
-        }
     </script>
 </div>
 </body>
