@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Festive Buffet Guide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+            color-scheme: dark;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body>
+<div class="min-h-screen flex flex-col bg-slate-950 text-slate-100 selection:bg-amber-500/30 selection:text-amber-200">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+            <!-- Brand / Title -->
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-utensils text-base"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm sm:text-base font-extrabold tracking-tight text-white leading-tight">Team Festive Buffet Options</h1>
+                    <p class="text-[11px] text-slate-400">50% Off Eatigo Deals • Origin: CapitaSky (Tanjong Pagar)</p>
+                </div>
+            </div>
+
+            <!-- Right Controls: Copy Slack Summary & Guide Modal Trigger -->
+            <div class="flex items-center space-x-2">
+                <button onclick="openSlackGuide()" class="flex items-center space-x-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-2 rounded-xl text-xs font-semibold border border-slate-700 transition">
+                    <i class="fa-solid fa-circle-question text-amber-400"></i>
+                    <span class="hidden md:inline">How to Post in Slack</span>
+                </button>
+                <button onclick="copySlackSummary()" class="flex items-center space-x-2 bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-600 hover:to-purple-800 text-white px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-lg shadow-purple-900/40 border border-purple-500/30 transition active:scale-95">
+                    <i class="fa-brands fa-slack text-sm"></i>
+                    <span class="hidden sm:inline">Copy for Slack</span>
+                    <span class="sm:hidden">Slack</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Banner / Intro -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="space-y-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    <i class="fa-solid fa-gift"></i> FESTIVE BUFFET GUIDE 2026/2027
+                </span>
+                <h2 class="text-xl sm:text-2xl font-extrabold text-white">Compare Venue Options & Menus</h2>
+                <p class="text-xs sm:text-sm text-slate-400 max-w-2xl">
+                    Review pricing, travel times from CapitaSky (79 Robinson Rd), expandable menu highlights, and vegetarian options. Copy the summary below to post directly into your Slack channel!
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                <button onclick="copySlackSummary()" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-5 py-3 rounded-xl text-sm shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-slack text-base"></i> Copy Slack Markdown Message
+                </button>
+            </div>
+        </section>
+
+        <!-- Venue Options Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+
+            <!-- OPTION 1: The Orchard Cafe -->
+            <article class="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl flex flex-col transition-all duration-300 group">
+                <div class="relative h-48 w-full overflow-hidden bg-slate-800">
+                    <img src="images/orchard-cafe.jpg" alt="The Orchard Cafe Buffet Spread" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-red-600 text-white text-[11px] font-black px-2.5 py-1 rounded-lg shadow-md uppercase tracking-wide">
+                            50% OFF Eatigo
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-6 flex-grow flex flex-col space-y-4">
+                    <div>
+                        <div class="flex items-baseline justify-between gap-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">The Orchard Cafe</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-black text-amber-400">SGD 47.00</span>
+                                <span class="text-xs text-slate-400 line-through block">SGD 94.00</span>
+                            </div>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 mt-0.5">Orchard Hotel Singapore</p>
+                    </div>
+
+                    <!-- Ratings & CapitaSky Travel Bar -->
+                    <div class="space-y-2">
+                        <div class="flex flex-wrap items-center gap-2 text-xs">
+                            <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-amber-400"></i> 4.4 Google <span class="text-slate-400 text-[10px] ml-1">(1.1K)</span>
+                            </span>
+                            <span class="bg-red-500/10 text-red-300 border border-red-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-red-400"></i> 4.3 Eatigo <span class="text-slate-400 text-[10px] ml-1">(3.1K)</span>
+                            </span>
+                        </div>
+                        <div class="bg-slate-950/80 rounded-xl p-2.5 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+                            <span class="text-slate-400 font-medium flex items-center">
+                                <i class="fa-solid fa-location-arrow text-amber-400 mr-1.5"></i> From CapitaSky:
+                            </span>
+                            <span class="font-semibold text-white">6.1 km · ~20m drive / ~25m MRT</span>
+                        </div>
+                    </div>
+
+                    <!-- Exact Buffet Name Banner -->
+                    <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-xs text-slate-300 space-y-1.5">
+                        <div class="font-bold text-amber-300">Weekday Lunch Buffet</div>
+                        <div class="flex items-center text-slate-400 gap-2">
+                            <i class="fa-regular fa-clock text-amber-400 w-3.5"></i>
+                            <span>Mon – Thu • 12:00 PM – 2:30 PM (02 Nov – 03 Jan)</span>
+                        </div>
+                        <div class="flex items-start text-slate-400 gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-400 w-3.5 mt-0.5"></i>
+                            <span>442 Orchard Road, Lobby Level, Singapore 238879</span>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Menu Accordion -->
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+                        <button onclick="toggleMenu('menu-orchard', 'icon-orchard')" class="w-full px-4 py-3 text-left text-xs font-bold text-slate-200 hover:bg-slate-800/60 flex items-center justify-between transition">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-book-open text-amber-400"></i>
+                                View Buffet Menu & Veg Highlights
+                            </span>
+                            <i id="icon-orchard" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="menu-orchard" class="hidden px-4 pb-4 pt-2 border-t border-slate-800/80 text-xs space-y-3 text-slate-300">
+                            <div>
+                                <p class="font-bold text-amber-400 mb-1">Seafood & Carving Highlights:</p>
+                                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                                    <li>Poached Tiger Prawns, Half-Shell Scallops & Black Mussels</li>
+                                    <li>Slow-Roasted Australian Striploin & Crispy Pork Belly</li>
+                                    <li>Signature Orchard Laksa & Hainanese Chicken Rice</li>
+                                    <li>Assorted Sashimi & Japanese Sushi Platter</li>
+                                </ul>
+                            </div>
+                            <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-lg p-2.5">
+                                <p class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+                                    <i class="fa-solid fa-leaf"></i> Vegetarian Highlights:
+                                </p>
+                                <ul class="list-disc list-inside space-y-0.5 text-emerald-200/80 text-[11px]">
+                                    <li>Live Pasta Station (Aglio Olio / Truffle Cream Mushroom)</li>
+                                    <li>Indian Vegetarian Curry, Dal Makhani & Garlic Naan</li>
+                                    <li>Wok-Fried Seasonal Greens, Tofu & Garden Salad Bar</li>
+                                </ul>
+                            </div>
+                            <div class="pt-1 flex items-center justify-between gap-2 border-t border-slate-800/80">
+                                <a href="https://www.millenniumhotels.com/mhb-media/regions/asia/singapore/orchardhotelsingapore/dining/documents/toc/toc-weekday_28oct.pdf?rev=f0282b78e77e4fe4b52f5a62bb2a3079" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-file-pdf"></i> Official Menu PDF
+                                </a>
+                                <a href="https://eatigo.com/en/branches/3373954165950" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-ticket"></i> Eatigo Page
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- OPTION 2: Edge @ Pan Pacific Singapore -->
+            <article class="bg-slate-900 border border-slate-800 hover:border-indigo-500/40 rounded-2xl overflow-hidden shadow-xl flex flex-col transition-all duration-300 group">
+                <div class="relative h-48 w-full overflow-hidden bg-slate-800">
+                    <img src="images/edge-pan-pacific.jpg" alt="Edge Pan Pacific Buffet Spread" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-red-600 text-white text-[11px] font-black px-2.5 py-1 rounded-lg shadow-md uppercase tracking-wide">
+                            50% OFF Eatigo
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-6 flex-grow flex flex-col space-y-4">
+                    <div>
+                        <div class="flex items-baseline justify-between gap-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Edge</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-black text-indigo-400">SGD 39.00</span>
+                                <span class="text-xs text-slate-400 line-through block">SGD 78.00</span>
+                            </div>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 mt-0.5">Pan Pacific Singapore</p>
+                    </div>
+
+                    <!-- Ratings & CapitaSky Travel Bar -->
+                    <div class="space-y-2">
+                        <div class="flex flex-wrap items-center gap-2 text-xs">
+                            <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-amber-400"></i> 4.2 Google <span class="text-slate-400 text-[10px] ml-1">(1.6K)</span>
+                            </span>
+                            <span class="bg-red-500/10 text-red-300 border border-red-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-red-400"></i> 4.8 Eatigo
+                            </span>
+                        </div>
+                        <div class="bg-slate-950/80 rounded-xl p-2.5 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+                            <span class="text-slate-400 font-medium flex items-center">
+                                <i class="fa-solid fa-location-arrow text-indigo-400 mr-1.5"></i> From CapitaSky:
+                            </span>
+                            <span class="font-semibold text-white">2.6 km · ~9m drive / ~25m MRT</span>
+                        </div>
+                    </div>
+
+                    <!-- Exact Buffet Name Banner -->
+                    <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-xs text-slate-300 space-y-1.5">
+                        <div class="font-bold text-indigo-300">Festive Weekday Lunch</div>
+                        <div class="flex items-center text-slate-400 gap-2">
+                            <i class="fa-regular fa-clock text-indigo-400 w-3.5"></i>
+                            <span>Mon – Thu • 12:00 PM – 2:30 PM (16 Nov – 30 Nov)</span>
+                        </div>
+                        <div class="flex items-start text-slate-400 gap-2">
+                            <i class="fa-solid fa-location-dot text-indigo-400 w-3.5 mt-0.5"></i>
+                            <span>7 Raffles Boulevard, Level 3, Singapore 039595</span>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Menu Accordion -->
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+                        <button onclick="toggleMenu('menu-edge', 'icon-edge')" class="w-full px-4 py-3 text-left text-xs font-bold text-slate-200 hover:bg-slate-800/60 flex items-center justify-between transition">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-book-open text-indigo-400"></i>
+                                View Buffet Menu & Veg Highlights
+                            </span>
+                            <i id="icon-edge" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="menu-edge" class="hidden px-4 pb-4 pt-2 border-t border-slate-800/80 text-xs space-y-3 text-slate-300">
+                            <div>
+                                <p class="font-bold text-indigo-400 mb-1">Festive Theater Kitchens:</p>
+                                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                                    <li>Traditional Roasted Turkey with Chestnut Stuffing & Cranberry</li>
+                                    <li>Honey-Glazed Gammon Ham & Slow-Roasted Beef Ribeye</li>
+                                    <li>Freshly Shucked Oysters, Snow Crab Legs & Sashimi</li>
+                                    <li>Singapore Nyonya Laksa & Peranakan Specialties</li>
+                                </ul>
+                            </div>
+                            <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-lg p-2.5">
+                                <p class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+                                    <i class="fa-solid fa-leaf"></i> Vegetarian Highlights:
+                                </p>
+                                <ul class="list-disc list-inside space-y-0.5 text-emerald-200/80 text-[11px]">
+                                    <li>Truffle Mushroom Risotto & Wood-Fired Margherita Pizza</li>
+                                    <li>Dedicated North & South Indian Vegetarian Thali Counter</li>
+                                    <li>Roasted Root Vegetables, Mezze Platter & Gourmet Cheeses</li>
+                                </ul>
+                            </div>
+                            <div class="pt-1 flex items-center justify-between gap-2 border-t border-slate-800/80">
+                                <a href="https://www.menu-ppsin.panpacific.com/festive-weekday-lunch-nov" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-up-right-from-square"></i> Digital Menu
+                                </a>
+                                <a href="https://eatigo.com/en/branches/3394733747670" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-ticket"></i> Eatigo Page
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- OPTION 3: Town Restaurant @ The Fullerton Hotel -->
+            <article class="bg-slate-900 border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden shadow-xl flex flex-col transition-all duration-300 group">
+                <div class="relative h-48 w-full overflow-hidden bg-slate-800">
+                    <img src="images/town-restaurant.jpg" alt="Town Restaurant Fullerton Buffet Spread" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+                    <div class="absolute top-3 left-3">
+                        <span class="bg-red-600 text-white text-[11px] font-black px-2.5 py-1 rounded-lg shadow-md uppercase tracking-wide">
+                            50% OFF Eatigo
+                        </span>
+                    </div>
+                </div>
+
+                <div class="p-6 flex-grow flex flex-col space-y-4">
+                    <div>
+                        <div class="flex items-baseline justify-between gap-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Town Restaurant</h3>
+                            <div class="text-right">
+                                <span class="text-2xl font-black text-emerald-400">SGD 39.00</span>
+                                <span class="text-xs text-slate-400 line-through block">SGD 78.00</span>
+                            </div>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-400 mt-0.5">The Fullerton Hotel Singapore</p>
+                    </div>
+
+                    <!-- Ratings & CapitaSky Travel Bar -->
+                    <div class="space-y-2">
+                        <div class="flex flex-wrap items-center gap-2 text-xs">
+                            <span class="bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-amber-400"></i> 4.1 Google <span class="text-slate-400 text-[10px] ml-1">(877)</span>
+                            </span>
+                            <span class="bg-red-500/10 text-red-300 border border-red-500/30 font-semibold px-2.5 py-1 rounded-lg flex items-center">
+                                <i class="fa-solid fa-star mr-1 text-red-400"></i> 4.5 Eatigo <span class="text-slate-400 text-[10px] ml-1">(297)</span>
+                            </span>
+                        </div>
+                        <div class="bg-slate-950/80 rounded-xl p-2.5 border border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+                            <span class="text-slate-400 font-medium flex items-center">
+                                <i class="fa-solid fa-location-arrow text-emerald-400 mr-1.5"></i> From CapitaSky:
+                            </span>
+                            <span class="font-semibold text-white">1.4 km · ~6m drive / ~13m MRT</span>
+                        </div>
+                    </div>
+
+                    <!-- Exact Buffet Name Banner -->
+                    <div class="bg-slate-950/60 rounded-xl p-3 border border-slate-800/80 text-xs text-slate-300 space-y-1.5">
+                        <div class="font-bold text-emerald-300">Festive Lunch Adult Buffet</div>
+                        <div class="flex items-center text-slate-400 gap-2">
+                            <i class="fa-regular fa-clock text-emerald-400 w-3.5"></i>
+                            <span>Mon – Fri • 12:00 PM – 2:30 PM (09 Nov – 30 Dec)</span>
+                        </div>
+                        <div class="flex items-start text-slate-400 gap-2">
+                            <i class="fa-solid fa-location-dot text-emerald-400 w-3.5 mt-0.5"></i>
+                            <span>1 Fullerton Square, Singapore 049178</span>
+                        </div>
+                    </div>
+
+                    <!-- Expandable Menu Accordion -->
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950/40">
+                        <button onclick="toggleMenu('menu-town', 'icon-town')" class="w-full px-4 py-3 text-left text-xs font-bold text-slate-200 hover:bg-slate-800/60 flex items-center justify-between transition">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-book-open text-emerald-400"></i>
+                                View Buffet Menu & Veg Highlights
+                            </span>
+                            <i id="icon-town" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="menu-town" class="hidden px-4 pb-4 pt-2 border-t border-slate-800/80 text-xs space-y-3 text-slate-300">
+                            <div>
+                                <p class="font-bold text-emerald-400 mb-1">Riverside Festive Feast:</p>
+                                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                                    <li>Herb-Roasted Whole Turkey & Honey-Baked Ham</li>
+                                    <li>Chilled Poached Prawns, Clams & Norwegian Salmon Sashimi</li>
+                                    <li>Fullerton Signature Chicken Rice & Crispy Pork Belly</li>
+                                    <li>Festive Log Cakes, Stollen & Warm Bread Pudding</li>
+                                </ul>
+                            </div>
+                            <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-lg p-2.5">
+                                <p class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+                                    <i class="fa-solid fa-leaf"></i> Vegetarian Highlights:
+                                </p>
+                                <ul class="list-disc list-inside space-y-0.5 text-emerald-200/80 text-[11px]">
+                                    <li>Baked Spinach & Ricotta Cannelloni / Wild Mushroom Pasta</li>
+                                    <li>Braised Seasonal Vegetables with Black Moss & Tofu</li>
+                                    <li>Artisanal Salad Station, Hummus & Grilled Mediterranean Veg</li>
+                                </ul>
+                            </div>
+                            <div class="pt-1 flex items-center justify-between gap-2 border-t border-slate-800/80">
+                                <a href="https://document-tc.galaxy.tf/wdpdf-7l5u7ljc5jjh9rurf4zceqaa8/festive-lunch-buffet.pdf" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-file-pdf"></i> Official Menu PDF
+                                </a>
+                                <a href="https://eatigo.com/en/branches/3371379124888" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:underline font-semibold inline-flex items-center gap-1">
+                                    <i class="fa-solid fa-ticket"></i> Eatigo Page
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-6 mt-12 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>Singapore Team Festive Buffet Guide • All prices subject to 10% service charge & prevailing GST.</p>
+            <button onclick="copySlackSummary()" class="text-amber-400 hover:underline font-semibold flex items-center gap-1">
+                <i class="fa-brands fa-slack"></i> Copy Slack Summary
+            </button>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-slate-800 border border-amber-500/50 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-3 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="toast-message" class="text-xs font-medium">Notification message</span>
+    </div>
+
+    <!-- Script Logic -->
+    <script>
+        window.toggleMenu = function(menuId, iconId) {
+            const menu = document.getElementById(menuId);
+            const icon = document.getElementById(iconId);
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        };
+
+        window.copySlackSummary = function() {
+            const slackText = 
+`🍽️ *TEAM FESTIVE BUFFET LUNCH OPTIONS (50% EATIGO DEALS)* 🍽️
+📍 *Origin:* CapitaSky (79 Robinson Rd, Tanjong Pagar)
+🌱 *Vegetarian-friendly highlights included for all options!*
+
+1️⃣ *The Orchard Cafe @ Orchard Hotel Singapore*
+• Price: *SGD 47.00* (UP: SGD 94.00 | 50% Off) | Mon–Thu 12:00pm–2:30pm
+• Ratings: ★ 4.4 Google | ★ 4.3 Eatigo
+• Commute from CapitaSky: *6.1 km (~20m drive / ~25m MRT)*
+• Eatigo Booking: https://eatigo.com/en/branches/3373954165950
+• Menu PDF: https://www.millenniumhotels.com/mhb-media/regions/asia/singapore/orchardhotelsingapore/dining/documents/toc/toc-weekday_28oct.pdf?rev=f0282b78e77e4fe4b52f5a62bb2a3079
+
+2️⃣ *Edge @ Pan Pacific Singapore*
+• Price: *SGD 39.00* (UP: SGD 78.00 | 50% Off) | Mon–Thu 12:00pm–2:30pm
+• Ratings: ★ 4.2 Google | ★ 4.8 Eatigo
+• Commute from CapitaSky: *2.6 km (~9m drive / ~25m MRT)*
+• Eatigo Booking: https://eatigo.com/en/branches/3394733747670
+• Digital Menu: https://www.menu-ppsin.panpacific.com/festive-weekday-lunch-nov
+
+3️⃣ *Town Restaurant @ The Fullerton Hotel Singapore*
+• Price: *SGD 39.00* (UP: SGD 78.00 | 50% Off) | Mon–Fri 12:00pm–2:30pm
+• Ratings: ★ 4.1 Google | ★ 4.5 Eatigo
+• Commute from CapitaSky: *1.4 km (~6m drive / ~13m MRT)*
+• Eatigo Booking: https://eatigo.com/en/branches/3371379124888
+• Menu PDF: https://document-tc.galaxy.tf/wdpdf-7l5u7ljc5jjh9rurf4zceqaa8/festive-lunch-buffet.pdf
+
+👇 *Cast your vote in the reactions below!*
+1️⃣ The Orchard Cafe
+2️⃣ Edge @ Pan Pacific
+3️⃣ Town Restaurant @ Fullerton`;
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(slackText).then(
+                    function () { showToast("Slack summary copied to clipboard successfully!", "success"); },
+                    function () { fallbackCopy(slackText); }
+                );
+            } else {
+                fallbackCopy(slackText);
+            }
+        };
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Slack summary copied to clipboard successfully!", "success");
+            } catch (err) {
+                showToast("Failed to copy automatically.", "error");
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+
+        window.openSlackGuide = function() {
+            showToast("Click 'Copy for Slack' and paste it right into your Slack channel!", "info");
+        };
+
+        function showToast(msg, type = "success") {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            const iconEl = document.getElementById('toast-icon');
+
+            msgEl.innerText = msg;
+            if (type === "success") {
+                iconEl.className = "fa-solid fa-circle-check text-emerald-400 text-lg";
+            } else {
+                iconEl.className = "fa-solid fa-circle-info text-amber-400 text-lg";
+            }
+
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+    </script>
+</div>
+</body>
+</html>
